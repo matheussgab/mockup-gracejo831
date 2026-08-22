@@ -137,6 +137,15 @@ header.site {
 .nav-links-right a:not(.btn):hover::after { right: 0; }
 .nav-links-right .btn { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
 
+.btn[aria-current="page"] {
+  background: var(--charcoal-3);
+  border-color: var(--line-strong);
+  color: var(--bone-dim);
+  cursor: default;
+  pointer-events: none;
+  transform: none;
+}
+
 .brand {
   font-family: var(--font-display);
   font-weight: 800;

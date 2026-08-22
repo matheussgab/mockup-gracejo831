@@ -262,24 +262,31 @@
     .foco-item, .foco-item img { transition: none; }
   }
 
-  .menu-index-row {
+  .menu-index {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    gap: clamp(1.5rem, 4vw, 3rem);
-    padding-block: clamp(1.6rem, 3.4vw, 2.2rem);
+    grid-template-columns: repeat(2, 1fr);
     border-top: 1px solid var(--line);
-    align-items: baseline;
+    border-left: 1px solid var(--line);
   }
-  .menu-index-row:last-of-type { border-bottom: 1px solid var(--line); }
+  .menu-index-row {
+    padding: clamp(1.8rem, 3.6vw, 2.6rem) clamp(1.6rem, 3vw, 2.4rem);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    transition: background 0.2s ease;
+  }
+  .menu-index-row:hover { background: rgba(185, 154, 99, 0.05); }
   .menu-index-row h3 {
     font-family: var(--font-serif);
     font-style: italic;
     font-weight: 400;
-    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
   }
-  .menu-index-row p { color: var(--bone-dim); font-size: 0.98rem; max-width: 52ch; }
+  .menu-index-row p { color: var(--bone-dim); font-size: 0.96rem; max-width: 34ch; }
   @media (max-width: 700px) {
-    .menu-index-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .menu-index { grid-template-columns: 1fr; }
   }
 
   .menu-note {

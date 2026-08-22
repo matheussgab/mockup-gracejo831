@@ -1,0 +1,4 @@
+.vercel
+.impeccable/
+*.zip
+node_modules/

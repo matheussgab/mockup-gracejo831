@@ -17,13 +17,13 @@ Both audiences convert one of three ways: reserving via Instagram DM (there is n
 
 ## Product Purpose
 
-A two-page presentation site for Gracejo 831, a parrilla-and-bar restaurant in Cidade Baixa, Porto Alegre: `index.html`, the landing page, and `pedir.html`, an honest mockup of an online-ordering flow (pickup only, front-end only, no order actually reaches the kitchen). It exists to convert either audience into a reservation (via Instagram), an in-person visit, or a look at what ordering online could feel like, by conveying the house's food, wine, and atmosphere credibly enough to act on.
+A two-page presentation site for Gracejo 831, a mid-to-upscale churrasco/parrilla restaurant in Cidade Baixa, Porto Alegre: `index.html`, the landing page, and `pedir.html`, an honest mockup of an online-ordering flow (pickup only, front-end only, no order actually reaches the kitchen). It exists to convert either audience into a reservation (via Instagram), an in-person visit, or a look at what ordering online could feel like, by conveying the house's food, wine, and atmosphere credibly enough to act on.
 
 **This is currently a pitch mockup**, not the live production site — built to present the concept to the restaurant's owner (the footer explicitly marks it: "Mockup de apresentação"). Treat visual and content decisions accordingly: the bar is "convincing enough to sell the owner on this direction," not yet "shipped and load-bearing for real customers."
 
 ## Positioning
 
-Brazilian parrilla with the informality of a corner neighborhood bar — not a formal steakhouse. The stated hook: low-heat asado technique, a hand-picked wine list, and a house that welcomes dogs at the table. Success is being read as a bairro institution you'd return to on a Tuesday, not an occasion-only destination.
+Brazilian churrasco/parrilla positioned as a proper mid-to-upscale restaurant, not a casual bar (corrected 2026-08-22 — earlier copy leaned on "bar de esquina"/"bar de bairro" framing and was flagged as reading too casual for the restaurant's actual tier). The stated hook: low-heat asado technique, a hand-picked wine list, and a house that welcomes dogs at the table. Success is being read as a respected neighborhood restaurant you'd return to on a Tuesday — rooted in Cidade Baixa and still warm, but not a "bar."
 
 ## Operating Context
 
@@ -44,7 +44,7 @@ Brazilian parrilla with the informality of a corner neighborhood bar — not a f
 
 - Name: Gracejo 831 (831 references the street address).
 - Instagram: @gracejo831_ — the sole reservation/contact channel.
-- Existing visual system (charcoal/ember/malbec palette, Bricolage Grotesque + Instrument Serif + Archivo type, film-grain texture, ember-glow hero) is the incumbent identity for this project; preserve it as authority unless the user asks for a redesign.
+- Existing visual system (charcoal/ember/malbec/brass palette, Bricolage Grotesque + Bodoni Moda italic + Archivo type, film-grain texture, transparent-to-solid nav over a full-bleed hero photo) is the incumbent identity for this project; preserve it as authority unless the user asks for a redesign.
 - Real customer quote in use: "O pão de alho é impossível de parar de comer." — cited as "cliente, Tripadvisor." Treat as real evidence, not a placeholder to be swapped without checking.
 
 ## Evidence on Hand
@@ -55,7 +55,7 @@ Brazilian parrilla with the informality of a corner neighborhood bar — not a f
 
 ## Product Principles
 
-1. Preserve the bairro-parrilla warmth over polish that reads corporate or fine-dining — the informality is the differentiator, not a gap to close.
+1. This is a mid-to-upscale restaurant, not a bar — avoid "bar de esquina"/"bar de bairro" framing in copy. Keep the bairro warmth in hospitality and rootedness (Cidade Baixa, dog-friendly, informal hours), but let craft and polish read as intentional rather than something to downplay.
 2. Reservations stay Instagram-first; don't invent a real booking/contact mechanism this restaurant doesn't have. The one deliberate exception is `pedir.html`: an honest, clearly-disclosed front-end mockup of online ordering, never presented or wired as if it were live.
 3. Keep real facts (address, hours, handle, the one real quote) exact and unchanged; keep placeholder content (mood-grid imagery) legible as placeholder rather than dressed up as final.
 4. Since this is a pitch mockup, bias toward the version that best sells the owner on the direction — ambition and polish matter more here than they would on a already-launched site.

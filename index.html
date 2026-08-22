@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <title>Gracejo 831</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Gracejo 831: parrilla brasileiro-uruguaia na Cidade Baixa, Porto Alegre. Cortes no ponto, adega escolhida a dedo, casa pet friendly." />
+<meta name="description" content="Gracejo 831: parrilla brasileira na Cidade Baixa, Porto Alegre. Cortes no ponto, adega escolhida a dedo, casa pet friendly." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -305,10 +305,10 @@
   .ambiente .section-head p { max-width: 44ch; }
   .mood-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.6rem;
   }
-  @media (max-width: 900px) { .mood-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 700px) { .mood-grid { grid-template-columns: repeat(2, 1fr); } }
   .mood-card {
     aspect-ratio: 1 / 1;
     border-radius: 4px;
@@ -456,7 +456,7 @@ its provenance.
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" data-nav-toggle aria-label="Abrir menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <a href="#top" class="brand">GRACEJO<span>&nbsp;831</span></a>
+    <a href="#top" class="brand"><img src="assets/logo.png" alt="Gracejo 831" /></a>
     <div class="nav-links-right">
       <a href="#casa">A Casa</a>
       <a href="#cardapio">Cardápio</a>
@@ -490,7 +490,6 @@ its provenance.
         <span class="line-italic">Fogo baixo,</span>
         <span class="line-strong">vinho aberto.</span>
       </h1>
-      <p class="hero-sub">Parrilla brasileiro-uruguaia no coração boêmio da Cidade Baixa, Porto Alegre: cortes no ponto, adega escolhida a dedo e uma casa que recebe até o seu cachorro.</p>
       <div class="hero-actions">
         <a class="pill" href="pedir.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
@@ -532,11 +531,11 @@ its provenance.
       </div>
       <div class="casa-media">
         <div class="casa-photo">
-          <img src="assets/mood_terraco.jpg" alt="Mesas ao ar livre sob luzes de varal ao entardecer (imagem gerada, clima ilustrativo)" loading="lazy" />
+          <img src="assets/mood_brasa.jpg" alt="Brasa baixa sob grelha de ferro, fumaça subindo (imagem gerada, clima ilustrativo)" loading="lazy" />
         </div>
         <div class="casa-strip">
           <div class="casa-strip-row"><span class="k">Bairro</span><span class="v">Cidade Baixa</span></div>
-          <div class="casa-strip-row"><span class="k">Cozinha</span><span class="v">Parrilla BR · UY</span></div>
+          <div class="casa-strip-row"><span class="k">Cozinha</span><span class="v">Parrilla</span></div>
           <div class="casa-strip-row"><span class="k">Pet friendly</span><span class="v">Sim</span></div>
           <div class="casa-strip-row"><span class="k">Reservas</span><span class="v">Via Instagram</span></div>
         </div>
@@ -620,11 +619,6 @@ its provenance.
           <span>Adega sempre aberta</span>
         </div>
         <div class="mood-card">
-          <img src="assets/mood_terraco.jpg" alt="Mesas ao ar livre sob luzes de varal ao entardecer (imagem gerada, clima ilustrativo)" loading="lazy" />
-          <svg class="ig-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
-          <span>Terraço na Cidade Baixa</span>
-        </div>
-        <div class="mood-card">
           <img src="assets/mood_cachorro.jpg" alt="Cachorro tranquilo deitado junto a uma mesa de madeira (imagem gerada, clima ilustrativo)" loading="lazy" />
           <svg class="ig-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
           <span>Cães bem-vindos à mesa</span>
@@ -673,7 +667,7 @@ its provenance.
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="#top" class="foot-brand">GRACEJO<span>&nbsp;831</span></a>
+        <a href="#top" class="foot-brand"><img src="assets/logo.png" alt="Gracejo 831" /></a>
         <p style="color:var(--bone-dim); font-size:0.9rem; max-width:28ch; margin-top:0.8rem;">Parrilla e bar na Cidade Baixa de Porto Alegre.</p>
       </div>
       <div class="foot-cols">

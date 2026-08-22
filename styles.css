@@ -15,7 +15,7 @@
   --font-display: "Bricolage Grotesque", "Arial Narrow", sans-serif;
   --font-serif: "Bodoni Moda", Georgia, serif;
   --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --nav-h: 76px;
+  --nav-h: 81px;
 }
 
 * { box-sizing: border-box; }
@@ -155,14 +155,15 @@ header.site:has(.nav-mobile-panel.is-open) {
 }
 
 .brand {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
   flex: none;
+  display: inline-flex;
+  align-items: center;
 }
-.brand span { color: var(--ember); }
+.brand img {
+  height: 2.75rem;
+  width: auto;
+  display: block;
+}
 
 .nav-toggle {
   display: none;
@@ -181,7 +182,7 @@ header.site:has(.nav-mobile-panel.is-open) {
   .nav-links-right { justify-content: flex-end; gap: 0.6rem; }
   .nav-links-right .btn-ghost { display: none; }
   .nav-toggle { display: inline-flex; order: -1; }
-  .brand { font-size: 1rem; }
+  .brand img { height: 2.2rem; }
 
   .nav-mobile-panel {
     display: grid;
@@ -246,8 +247,8 @@ footer {
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--line);
 }
-.foot-brand { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; }
-.foot-brand span { color: var(--ember); }
+.foot-brand { display: inline-flex; align-items: center; }
+.foot-brand img { height: 2.3rem; width: auto; display: block; }
 .foot-cols { display: flex; gap: clamp(2rem, 6vw, 5rem); flex-wrap: wrap; }
 .foot-col h4 {
   font-size: 0.72rem;

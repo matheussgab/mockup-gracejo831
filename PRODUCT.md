@@ -23,7 +23,7 @@ A two-page presentation site for Gracejo 831, a parrilla-and-bar restaurant in C
 
 ## Positioning
 
-Brazilian-Uruguayan parrilla with the informality of a corner neighborhood bar — not a formal steakhouse. The stated hook: low-heat asado technique, a hand-picked wine list, and a house that welcomes dogs at the table. Success is being read as a bairro institution you'd return to on a Tuesday, not an occasion-only destination.
+Brazilian parrilla with the informality of a corner neighborhood bar — not a formal steakhouse. The stated hook: low-heat asado technique, a hand-picked wine list, and a house that welcomes dogs at the table. Success is being read as a bairro institution you'd return to on a Tuesday, not an occasion-only destination.
 
 ## Operating Context
 

@@ -218,6 +218,7 @@ section { padding-block: clamp(4rem, 9vw, 6.5rem); }
 /* ---------- Footer ---------- */
 footer {
   padding-block: 3rem;
+  border-top: 1px solid var(--line);
 }
 .foot-grid {
   display: flex;

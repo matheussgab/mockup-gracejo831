@@ -1,12 +1,17 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
 <title>Pedir Online · Gracejo 831</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Peça online no Gracejo 831 (mockup de apresentação): monte o carrinho e veja como funcionaria a retirada no balcão." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 
 <style>
-  /* ---------- Order page header ---------- */
+  /* ---------- Order hero ---------- */
   .order-hero {
     border-bottom: 1px solid var(--line);
     background: radial-gradient(120% 100% at 15% 0%, var(--charcoal-2), var(--charcoal) 60%);
@@ -14,22 +19,22 @@
   }
   .order-hero h1 {
     font-weight: 800;
-    line-height: 0.96;
-    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 0.98;
+    font-size: clamp(2.4rem, 6vw, 4rem);
     letter-spacing: -0.01em;
-    margin-top: 0.6rem;
     max-width: 16ch;
   }
   .order-tagline {
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: clamp(1.15rem, 2.1vw, 1.5rem);
-    color: var(--bone);
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    color: var(--brass);
     max-width: 34ch;
-    margin-top: 1.1rem;
+    margin-top: 1rem;
   }
   .order-sub {
-    max-width: 56ch;
+    max-width: 58ch;
     color: var(--bone-dim);
     margin-top: 1rem;
     font-size: 1rem;
@@ -47,9 +52,7 @@
   .order-meta strong { color: var(--bone); font-weight: 600; }
 
   /* ---------- Featured combo ---------- */
-  .featured {
-    padding-block: clamp(2rem, 5vw, 3rem) 0;
-  }
+  .featured { padding-block: clamp(2rem, 5vw, 3rem) 0; }
   .combo-card {
     display: grid;
     grid-template-columns: 220px 1fr auto;
@@ -57,25 +60,11 @@
     align-items: center;
     background: var(--charcoal-2);
     border: 1px solid var(--ember-dim);
-    border-radius: 18px;
+    border-radius: 4px;
     padding: 1.25rem;
   }
-  .combo-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  .combo-tag {
-    display: inline-block;
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ember);
-    margin-bottom: 0.4rem;
-  }
-  .combo-card h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .combo-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 3px; filter: saturate(0.94) brightness(0.94); }
+  .combo-card h3 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 1.5rem; margin-bottom: 0.4rem; }
   .combo-card p { color: var(--bone-dim); font-size: 0.92rem; max-width: 42ch; }
   .combo-price { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
   .combo-price s { color: var(--bone-dim); font-weight: 500; font-size: 0.9rem; margin-right: 0.4rem; }
@@ -93,23 +82,16 @@
     gap: clamp(2rem, 5vw, 3rem);
     align-items: start;
   }
-  @media (max-width: 900px) {
-    .order-layout { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 900px) { .order-layout { grid-template-columns: 1fr; } }
 
-  .cat-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 2rem;
-  }
+  .cat-tabs { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
   .cat-tab {
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 0.82rem;
     padding: 0.55rem 1.1rem;
     border-radius: 999px;
-    border: 1px solid var(--line);
+    border: 1px solid var(--line-strong);
     background: transparent;
     color: var(--bone-dim);
     cursor: pointer;
@@ -118,17 +100,13 @@
   .cat-tab:hover { border-color: var(--brass); color: var(--bone); }
   .cat-tab.is-active { background: var(--ember); border-color: var(--ember); color: #1b0f08; }
 
-  .item-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.1rem;
-  }
+  .item-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
   @media (max-width: 560px) { .item-grid { grid-template-columns: 1fr; } }
 
   .item-card {
     background: var(--charcoal-2);
     border: 1px solid var(--line);
-    border-radius: 16px;
+    border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -138,12 +116,7 @@
   }
   .item-card.is-visible { opacity: 1; transform: translateY(0); }
   .item-card:hover { border-color: var(--ember-dim); }
-  .item-thumb {
-    height: 130px;
-    width: 100%;
-    object-fit: cover;
-    display: block;
-  }
+  .item-thumb { height: 130px; width: 100%; object-fit: cover; display: block; filter: saturate(0.94) brightness(0.92); }
   .item-thumb.no-photo {
     height: 130px;
     display: flex;
@@ -161,43 +134,19 @@
   .item-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 0.4rem; gap: 0.6rem; }
   .item-price { font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
 
-  .qty-stepper {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: var(--charcoal-3);
-    border-radius: 999px;
-    padding: 0.3rem;
-  }
+  .qty-stepper { display: flex; align-items: center; gap: 0.6rem; background: var(--charcoal-3); border-radius: 999px; padding: 0.3rem; }
   .qty-btn {
-    width: 1.6rem;
-    height: 1.6rem;
-    border-radius: 50%;
-    border: none;
-    background: transparent;
-    color: var(--bone);
-    font-size: 1rem;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.15s ease;
+    width: 1.6rem; height: 1.6rem; border-radius: 50%; border: none; background: transparent;
+    color: var(--bone); font-size: 1rem; line-height: 1; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: background 0.15s ease;
   }
   .qty-btn:hover { background: rgba(221, 106, 48, 0.22); }
   .qty-val { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.88rem; min-width: 1.1rem; text-align: center; }
 
   .btn-add {
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.82rem;
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    background: transparent;
-    color: var(--bone);
-    cursor: pointer;
-    transition: all 0.2s ease;
+    font-family: var(--font-body); font-weight: 600; font-size: 0.82rem;
+    padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid var(--line-strong);
+    background: transparent; color: var(--bone); cursor: pointer; transition: all 0.2s ease;
   }
   .btn-add:hover { border-color: var(--ember); color: var(--ember); }
 
@@ -207,10 +156,10 @@
     top: calc(var(--nav-h) + 1.25rem);
     background: var(--charcoal-2);
     border: 1px solid var(--line);
-    border-radius: 18px;
+    border-radius: 4px;
     padding: 1.5rem;
   }
-  .cart-panel h2 { font-size: 1.3rem; margin-bottom: 0.2rem; }
+  .cart-panel h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 1.6rem; margin-bottom: 0.2rem; }
   .cart-count { color: var(--bone-dim); font-size: 0.85rem; margin-bottom: 1.1rem; }
   .cart-empty { color: var(--bone-dim); font-size: 0.9rem; padding-block: 1rem; }
   .cart-list { display: flex; flex-direction: column; gap: 0.85rem; max-height: 40vh; overflow-y: auto; }
@@ -227,14 +176,8 @@
   .cart-form { display: flex; flex-direction: column; gap: 0.9rem; }
   .cart-form label { font-size: 0.78rem; color: var(--bone-dim); display: block; margin-bottom: 0.35rem; }
   .cart-form input, .cart-form select {
-    width: 100%;
-    background: var(--charcoal);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 0.7rem 0.85rem;
-    color: var(--bone);
-    font-family: var(--font-body);
-    font-size: 0.92rem;
+    width: 100%; background: var(--charcoal); border: 1px solid var(--line); border-radius: 4px;
+    padding: 0.7rem 0.85rem; color: var(--bone); font-family: var(--font-body); font-size: 0.92rem;
   }
   .cart-form input:focus, .cart-form select:focus { outline: 2px solid var(--ember); outline-offset: 1px; }
   .cart-back { font-size: 0.8rem; color: var(--bone-dim); cursor: pointer; display: inline-block; margin-top: 0.3rem; }
@@ -247,7 +190,7 @@
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto 1rem; font-size: 1.4rem;
   }
-  .cart-success h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+  .cart-success h3 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 1.4rem; margin-bottom: 0.6rem; }
   .cart-success p { color: var(--bone-dim); font-size: 0.88rem; }
   .cart-success .btn { margin-top: 0.8rem; }
 
@@ -256,9 +199,7 @@
   /* ---------- Mobile cart bar ---------- */
   .mobile-cart-bar {
     position: fixed;
-    left: 1rem;
-    right: 1rem;
-    bottom: 1rem;
+    left: 1rem; right: 1rem; bottom: 1rem;
     z-index: 90;
     display: none;
     align-items: center;
@@ -283,25 +224,43 @@
     .item-card { transition: none; opacity: 1; transform: none; }
   }
 </style>
+</head>
+<body>
 
 <header class="site">
   <nav class="nav wrap">
-    <a href="index.html#top" class="brand">GRACEJO<span>831</span></a>
-    <div class="nav-links">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" data-nav-toggle aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links-left">
       <a href="index.html#casa">A Casa</a>
       <a href="index.html#cardapio">Cardápio</a>
       <a href="index.html#ambiente">Ambiente</a>
-      <a href="index.html#horarios">Horários</a>
+    </div>
+    <a href="index.html#top" class="brand">GRACEJO<span>&nbsp;831</span></a>
+    <div class="nav-links-right">
+      <a href="index.html#contato">Contato</a>
       <a class="btn btn-ghost" href="pedir.html" aria-current="page">Pedir Online</a>
       <a class="btn btn-ember" href="https://www.instagram.com/gracejo831_/" target="_blank" rel="noopener">Reservar</a>
     </div>
   </nav>
+  <div class="nav-mobile-panel" id="nav-mobile" data-nav-panel>
+    <div class="wrap">
+      <a href="index.html#casa">A Casa</a>
+      <a href="index.html#cardapio">Cardápio</a>
+      <a href="index.html#ambiente">Ambiente</a>
+      <a href="index.html#contato">Contato</a>
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="pedir.html" aria-current="page">Pedir Online</a>
+        <a class="btn btn-ember" href="https://www.instagram.com/gracejo831_/" target="_blank" rel="noopener">Reservar</a>
+      </div>
+    </div>
+  </div>
 </header>
 
 <main id="top">
   <section class="order-hero">
     <div class="wrap">
-      <span class="eyebrow">Pedir Online</span>
       <h1>Leva um pouco da brasa pra casa.</h1>
       <p class="order-tagline">O pedido online do Gracejo, simulado do jeito que ele vai funcionar de verdade.</p>
       <p class="order-sub">Escolha os pratos, monte o carrinho e veja como fica finalizar um pedido direto pelo site. Por enquanto é só para retirada no balcão, e esta tela faz parte do mockup de apresentação: nenhum pedido feito aqui chega até a cozinha.</p>
@@ -318,7 +277,6 @@
       <div class="combo-card">
         <img src="assets/vinho_carne.png" alt="Corte grelhado com fritas ao lado de uma taça de Malbec" loading="lazy" />
         <div>
-          <span class="combo-tag">Sugestão da casa</span>
           <h3>Combo Carne &amp; Malbec</h3>
           <p>Um corte de chorizo com fritas da casa, acompanhado de uma taça de Malbec El Origen. Pensado pra comer sozinho ou dividir.</p>
         </div>
@@ -408,7 +366,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="index.html#top" class="foot-brand">GRACEJO<span>831</span></a>
+        <a href="index.html#top" class="foot-brand">GRACEJO<span>&nbsp;831</span></a>
         <p style="color:var(--bone-dim); font-size:0.9rem; max-width:28ch; margin-top:0.8rem;">Parrilla e bar na Cidade Baixa de Porto Alegre.</p>
       </div>
       <div class="foot-cols">
@@ -425,7 +383,7 @@
           <h4>Visite</h4>
           <ul>
             <li>Av. Venâncio Aires, 831</li>
-            <li>Cidade Baixa, Porto Alegre — RS</li>
+            <li>Cidade Baixa, Porto Alegre · RS</li>
           </ul>
         </div>
         <div class="foot-col">
@@ -437,11 +395,29 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>Mockup de apresentação — Gracejo 831</span>
+      <span>Mockup de apresentação · Gracejo 831</span>
       <a class="back-top" href="#top">Voltar ao topo ↑</a>
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var toggle = document.querySelector("[data-nav-toggle]");
+    var panel = document.querySelector("[data-nav-panel]");
+    if (!toggle || !panel) return;
+    toggle.addEventListener("click", function () {
+      var open = panel.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+    panel.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        panel.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  })();
+</script>
 
 <script>
   (function () {
@@ -685,3 +661,5 @@
     renderMobileBar();
   })();
 </script>
+</body>
+</html>

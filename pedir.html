@@ -15,7 +15,7 @@
   .order-hero {
     border-bottom: 1px solid var(--line);
     background: radial-gradient(120% 100% at 15% 0%, var(--charcoal-2), var(--charcoal) 60%);
-    padding-block: clamp(3rem, 8vw, 5rem) clamp(2.5rem, 6vw, 4rem);
+    padding-block: calc(var(--nav-h) + clamp(3rem, 8vw, 5rem)) clamp(2.5rem, 6vw, 4rem);
   }
   .order-hero h1 {
     font-weight: 800;
@@ -116,9 +116,9 @@
   }
   .item-card.is-visible { opacity: 1; transform: translateY(0); }
   .item-card:hover { border-color: var(--ember-dim); }
-  .item-thumb { height: 130px; width: 100%; object-fit: cover; display: block; filter: saturate(0.94) brightness(0.92); }
+  .item-thumb { aspect-ratio: 4 / 3; width: 100%; object-fit: cover; display: block; filter: saturate(0.94) brightness(0.92); }
   .item-thumb.no-photo {
-    height: 130px;
+    aspect-ratio: 4 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,7 +238,6 @@
       <a href="index.html#cardapio">Cardápio</a>
       <a href="index.html#ambiente">Ambiente</a>
       <a href="index.html#contato">Contato</a>
-      <a class="btn btn-ghost" href="pedir.html" aria-current="page">Pedir Online</a>
       <a class="btn btn-ember" href="https://www.instagram.com/gracejo831_/" target="_blank" rel="noopener">Reservar</a>
     </div>
   </nav>
@@ -249,7 +248,6 @@
       <a href="index.html#ambiente">Ambiente</a>
       <a href="index.html#contato">Contato</a>
       <div class="btn-row">
-        <a class="btn btn-ghost" href="pedir.html" aria-current="page">Pedir Online</a>
         <a class="btn btn-ember" href="https://www.instagram.com/gracejo831_/" target="_blank" rel="noopener">Reservar</a>
       </div>
     </div>
@@ -414,6 +412,18 @@
         toggle.setAttribute("aria-expanded", "false");
       });
     });
+  })();
+</script>
+
+<script>
+  (function () {
+    var header = document.querySelector("header.site");
+    if (!header) return;
+    function onScroll() {
+      header.classList.toggle("is-scrolled", window.scrollY > 40);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   })();
 </script>
 

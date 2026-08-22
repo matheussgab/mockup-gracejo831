@@ -100,12 +100,20 @@ p { text-wrap: pretty; }
 
 /* ---------- Nav ---------- */
 header.site {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+header.site.is-scrolled,
+header.site:has(.nav-mobile-panel.is-open) {
   background: rgba(18, 14, 12, 0.86);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
+  border-bottom-color: var(--line);
 }
 .nav {
   display: flex;

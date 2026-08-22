@@ -15,7 +15,7 @@
   .hero {
     position: relative;
     overflow: hidden;
-    min-height: calc(100vh - var(--nav-h));
+    min-height: 100vh;
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--line);
@@ -723,6 +723,18 @@ its provenance.
         toggle.setAttribute("aria-expanded", "false");
       });
     });
+  })();
+</script>
+
+<script>
+  (function () {
+    var header = document.querySelector("header.site");
+    if (!header) return;
+    function onScroll() {
+      header.classList.toggle("is-scrolled", window.scrollY > 40);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   })();
 </script>
 

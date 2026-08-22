@@ -108,25 +108,23 @@ header.site {
   border-bottom: 1px solid var(--line);
 }
 .nav {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-block: 1.15rem;
   gap: 1rem;
 }
-.nav-links-left, .nav-links-right {
+.nav-links-right {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 2.2vw, 1.9rem);
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--bone-dim);
-  flex: 1;
+  justify-content: flex-end;
 }
-.nav-links-right { justify-content: flex-end; }
-.nav-links-left a:not(.btn), .nav-links-right a:not(.btn) { transition: color 0.2s ease; position: relative; }
-.nav-links-left a:not(.btn)::after, .nav-links-right a:not(.btn)::after {
+.nav-links-right a:not(.btn) { transition: color 0.2s ease; position: relative; }
+.nav-links-right a:not(.btn)::after {
   content: "";
   position: absolute;
   left: 0; right: 100%;
@@ -135,20 +133,17 @@ header.site {
   background: var(--brass);
   transition: right 0.25s ease;
 }
-.nav-links-left a:not(.btn):hover, .nav-links-right a:not(.btn):hover { color: var(--bone); }
-.nav-links-left a:not(.btn):hover::after, .nav-links-right a:not(.btn):hover::after { right: 0; }
+.nav-links-right a:not(.btn):hover { color: var(--bone); }
+.nav-links-right a:not(.btn):hover::after { right: 0; }
 .nav-links-right .btn { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
 
 .brand {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.15rem;
   letter-spacing: 0.06em;
   white-space: nowrap;
+  flex: none;
 }
 .brand span { color: var(--ember); }
 
@@ -165,7 +160,7 @@ header.site {
 .nav-mobile-panel { display: none; }
 
 @media (max-width: 820px) {
-  .nav-links-left, .nav-links-right a:not(.btn) { display: none; }
+  .nav-links-right a:not(.btn) { display: none; }
   .nav-links-right { justify-content: flex-end; gap: 0.6rem; }
   .nav-links-right .btn-ghost { display: none; }
   .nav-toggle { display: inline-flex; order: -1; }
